@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(177, 200, 200);
+}
+.wrapper {
+    background-color: white;
+  border: black 2px solid;
+  border-radius: 10px;
+  width: 450px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 30px 10px;
+}
+.current_Date {
+  font-size: 1.45rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+}
+.cheveron {
+  border-radius: 450%;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  width: 40px;
+  cursor: pointer;
+}
+.calendar {
+  padding-right: 35px;
+}
+.calendar ul {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.calendar ul li {
+    margin-top: 30px;
+ 
+    z-index: 1;
+    position: relative;
+  width: calc(100% / 7);
+}
+.calendar .days li::before {
+    position: absolute;
+
+  height: 40px;
+  width: 50px;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius:10px ;
+}
+.days li:hover::before {
+background-color: rgb(148, 170, 190);
+
+}
+.days li.inactive{
+    color: grey;
+}
+.days li.active{
+    color: rgb(255, 255, 255);
+}
+.days li.active::before{
+    background-color: rgb(122, 142, 160);
+}
+.calendar .days {
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.week {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: large;
+  font-weight: 500;
+  margin-bottom: -10px;
+  cursor: default;
+}
+
+
